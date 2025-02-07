@@ -1,12 +1,18 @@
 pipeline {
     agent any
-
+    environment {
+        PYTHON_HOME = "C:\\Users\\YourUser\\AppData\\Local\\Programs\\Python\\Python313"
+        PATH = "${PYTHON_HOME};${env.PATH}"
+    }
     stages {
-        stage('Build') {
+        stage('Check Python') {
             steps {
-                script {
-                    bat 'python hello.py'
-                }
+                bat 'python --version'
+            }
+        }
+        stage('Execute Python') {
+            steps {
+                bat 'python hello.py'
             }
         }
     }
