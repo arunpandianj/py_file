@@ -1,1 +1,1 @@
-bat 'python -V'
+bat 'echo hi'
