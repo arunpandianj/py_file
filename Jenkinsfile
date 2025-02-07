@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    bat 'Python Pipeline'
+                    bat 'echo Python'
                     bat 'Python -V'
                 }
             }
