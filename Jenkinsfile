@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    bat 'java --version'
+                    bat 'python hello.py'
                 }
             }
         }
