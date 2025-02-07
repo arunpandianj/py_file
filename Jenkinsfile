@@ -6,6 +6,7 @@ pipeline {
             steps {
                 script {
                     bat 'echo Starting Hello World Pipeline'
+                    bat 'python -V'
                 }
             }
         }
