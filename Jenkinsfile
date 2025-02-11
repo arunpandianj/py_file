@@ -1,18 +1,14 @@
 pipeline {
-    agent any
-    environment {
-        PYTHON_HOME = "C:\\Users\\kanch\\AppData\\Local\\Programs\\Python\\Python313"
-        PATH = "${PYTHON_HOME};${env.PATH}"
-    }
+    agent { label 'java_agent' }
     stages {
         stage('Check Python') {
             steps {
-                bat 'python --version'
+                sh 'python3 --version'
             }
         }
         stage('Execute Python') {
             steps {
-                bat 'python hello.py'
+                sh 'python3 hello.py'
             }
         }
     }
